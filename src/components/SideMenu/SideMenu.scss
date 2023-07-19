@@ -1,0 +1,78 @@
+.side-menu {
+  width: 200px;
+  background-color: #c0c0c0;
+  padding: 20px 0;
+
+  .top-section {
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: underline;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  .tabs {
+    display: flex;
+    flex-direction: column;
+
+    .tab {
+      border-top: 1px solid black;
+      padding: 10px;
+
+      a {
+        color: black;
+        transition: color 0.2s ease;
+
+        &:hover {
+          color: #535bf2;
+          cursor: pointer;
+        }
+      }
+
+      &:last-child {
+        border-bottom: 1px solid black;
+      }
+
+      .tab-header {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+
+        .arrow {
+          margin-left: auto;
+          transform: scale(1) rotate(0deg);
+          transition: transform 0.3s ease;
+          user-select: none;
+
+          &:hover {
+            transform: scale(1.4);
+          }
+
+          &:active {
+            transform: scale(0.8);
+          }
+
+          &.open {
+            transform: rotate(90deg);
+
+            &:hover {
+              transform: scale(1.4) rotate(90deg);
+            }
+
+            &:active {
+              transform: scale(0.8) rotate(90deg);
+            }
+          }
+        }
+      }
+
+      .sub-options {
+        margin-left: 20px;
+
+        .sub-option {
+          margin: 10px 0;
+        }
+      }
+    }
+  }
+}
