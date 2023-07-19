@@ -1,9 +1,8 @@
-import React from "react";
 import DropdownTab from "./DropdownTab";
 import "./SideMenu.scss";
 
-const SideMenu: React.FC = () => {
-  const sideMenuTabs: { name: string; options: string[] }[] = [
+const SideMenu = () => {
+  const sideMenuTabs = [
     { name: "Career Path", options: [] },
     {
       name: "Competency",

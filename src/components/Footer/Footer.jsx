@@ -9,7 +9,7 @@ const miscellaneousLinks = [
   { label: "Contact Us", url: "/contact" },
 ];
 
-const Footer: React.FC = () => {
+const Footer = () => {
   return (
     <footer className="footer">
       <div className="left">{copyrightText}</div>
