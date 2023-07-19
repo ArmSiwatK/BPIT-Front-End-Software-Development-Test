@@ -1,6 +1,11 @@
 import React, { useState } from "react";
 
-const DropdownTab = ({ tabName, options }) => {
+interface DropdownTabProps {
+  tabName: string;
+  options: string[];
+}
+
+const DropdownTab: React.FC<DropdownTabProps> = ({ tabName, options }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleDropdown = () => {

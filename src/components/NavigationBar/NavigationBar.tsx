@@ -2,7 +2,7 @@ import React from "react";
 import profileSVG from "../../assets/profile.svg";
 import "./NavigationBar.scss";
 
-const NavigationBar = () => {
+const NavigationBar: React.FC = () => {
   return (
     <div className="navbar-container">
       <div className="company-name">HRD Software</div>
