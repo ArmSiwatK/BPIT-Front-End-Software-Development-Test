@@ -10,7 +10,7 @@ const Chart = () => {
         width: 300,
         height: 200,
         x: -150,
-        y: -100,
+        y: -75,
     };
     const depthFactor = 250;
     const siblingSeparation = {
@@ -25,16 +25,12 @@ const Chart = () => {
         <g>
             <foreignObject {...foreignObjectProps}>
                 <div className="chart-node">
-                    <h3>{nodeDatum.category}</h3>
-                    <h3>{nodeDatum.name}</h3>
-                    <h3>
-                        JOB GRADE: {nodeDatum.grade}
-                        <button
-                            className="circle-button"
-                        >
-                            +
-                        </button>
-                    </h3>
+                    <div className="node-category">{nodeDatum.category}</div>
+                    <div className="node-name">{nodeDatum.name}</div>
+                    <div className="node-grade-container">
+                        <div className="node-grade">JOB GRADE: {nodeDatum.grade}</div>
+                        <div className="circle-button"><span className="plus-symbol">+</span></div>
+                    </div>
                 </div>
             </foreignObject>
         </g>

@@ -3,36 +3,56 @@
   height: 79.5vh;
 
   .chart-node {
+    display: flex;
+    flex-direction: column;
     border: 1px solid black;
-    background-color: #dedede;
+    border-radius: 10px 10px 0 0;
+    background-color: white;
+    text-align: center;
 
-    h3 {
-      text-align: center;
+    .node-category {
+      border-radius: 10px 10px 0 0;
+      background-color: #dddddd;
+      padding: 10px;
+    }
+
+    .node-name {
+      text-decoration: underline;
+      padding: 10px;
+    }
+
+    .node-grade-container {
       display: flex;
       justify-content: center;
       align-items: center;
       gap: 20px;
+      padding: 10px;
 
       .circle-button {
+        width: 1em;
+        height: 1em;
         border-radius: 50%;
         background-color: #808080;
         color: white;
-        font-size: 18px;
+        font-size: 36px;
         cursor: pointer;
         border: none;
         outline: none;
         display: flex;
         align-items: center;
         justify-content: center;
-        transform: scale(0.8);
         transition: transform 0.2s;
 
+        .plus-symbol {
+          transform: translate(0, -2px);
+        }
+
         &:hover {
-          transform: scale(0.9);
+          transform: scale(1.1);
         }
 
         &:active {
-          transform: scale(0.7);
+          transform: scale(0.9);
         }
       }
     }
