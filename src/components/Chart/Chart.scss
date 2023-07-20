@@ -6,29 +6,6 @@
   position: relative;
   overflow: hidden;
 
-  .tree-background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    background-image: linear-gradient(
-      to top,
-      #444 0%,
-      #444 16.67%,
-      #666 16.67%,
-      #666 33.33%,
-      #888 33.33%,
-      #888 50%,
-      #aaa 50%,
-      #aaa 66.67%,
-      #ccc 66.67%,
-      #ccc 83.33%,
-      #eee 83.33%
-    );
-  }
-
   .job-grades {
     position: absolute;
     width: 100%;
@@ -37,6 +14,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    font-size: 32px;
 
     .grade-6 {
       color: black;
@@ -100,6 +78,7 @@
     border-radius: 10px 10px 0 0;
     background-color: white;
     text-align: center;
+    font-size: 20px;
 
     .node-category {
       border-radius: 10px 10px 0 0;

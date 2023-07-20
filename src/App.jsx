@@ -10,7 +10,10 @@ function App() {
       <NavigationBar />
       <div className="main">
         <SideMenu />
-        <Chart />
+        <div className="career-path">
+          <div className="career-path-title">Career Path</div>
+          <Chart />
+        </div>
       </div>
       <Footer />
     </>
