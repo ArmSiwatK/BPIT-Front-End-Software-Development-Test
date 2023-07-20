@@ -1,0 +1,43 @@
+.standard-promotion {
+  display: flex;
+  flex-direction: column;
+
+  .job-table {
+    width: 100%;
+    border-collapse: collapse;
+
+    th,
+    td {
+      border: 1px solid #ccc;
+      padding: 8px;
+      text-align: center;
+    }
+
+    th {
+      background-color: #f2f2f2;
+    }
+
+    .collapsed-row {
+      cursor: pointer;
+      font-style: italic;
+    }
+
+    .show-more {
+      transform: scale(1);
+      transition: transform 0.2s;
+
+      &:hover {
+        transform: scale(1.5);
+      }
+
+      &:active {
+        transform: scale(0.9);
+      }
+    }
+  }
+
+  .show-less {
+    border-radius: 0 0 10px 10px;
+    border-top: none;
+  }
+}

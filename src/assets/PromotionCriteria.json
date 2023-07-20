@@ -1,0 +1,18 @@
+{
+  "jobId": "001",
+  "jobName": "Technical Engineer",
+  "jobCategory": "R&D",
+  "jobGrade": "4",
+  "jobCriteria": {
+    "age": "24",
+    "seniority": "2",
+    "english": "Level 3",
+    "computing": "Level 4",
+    "mock1": "mock",
+    "mock2": "mock",
+    "mock3": "mock",
+    "mock4": "mock",
+    "mock5": "mock",
+    "mock6": "mock"
+  }
+}
