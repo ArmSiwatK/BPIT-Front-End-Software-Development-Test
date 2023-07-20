@@ -1,11 +1,7 @@
 {
-  "jobId": "001",
-  "jobName": "Technical Engineer",
-  "jobCategory": "R&D",
-  "jobGrade": "4",
-  "jobCriteria": {
-    "อายุ": "24 ปี",
-    "อายุงาน": "2 ปี",
+  "employeeStats": {
+    "อายุ": "22 ปี",
+    "อายุงาน": "1 ปี 6 เดือน",
     "ทักษะภาษาอังกฤษ": "ระดับ 3",
     "ทักษะคอมพิวเตอร์": "ระดับ 4",
     "mock1": "mock",

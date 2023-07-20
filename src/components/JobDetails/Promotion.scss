@@ -1,15 +1,17 @@
-.standard-promotion {
+.promotion-table-container {
   display: flex;
   flex-direction: column;
+  margin-top: 24px;
 
-  .job-table {
+  .promotion-table {
     width: 100%;
     border-collapse: collapse;
+    font-size: 18px;
 
     th,
     td {
       border: 1px solid #ccc;
-      padding: 8px;
+      padding: 8px 16px;
       text-align: center;
     }
 
@@ -19,7 +21,6 @@
 
     .collapsed-row {
       cursor: pointer;
-      font-style: italic;
     }
 
     .show-more {
