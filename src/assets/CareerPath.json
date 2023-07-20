@@ -1,0 +1,24 @@
+{
+  "category": "R&D",
+  "name": "Lead Technical Engineer",
+  "grade": "6",
+  "children": [
+    {
+      "category": "R&D",
+      "name": "Senior Support Engineer",
+      "grade": "5"
+    },
+    {
+      "category": "R&D",
+      "name": "Senior Technical Engineer",
+      "grade": "5",
+      "children": [
+        {
+          "category": "Worker",
+          "name": "Technical Engineer",
+          "grade": "4"
+        }
+      ]
+    }
+  ]
+}
