@@ -10,8 +10,9 @@ const Chart = () => {
         width: 300,
         height: 200,
         x: -150,
-        y: -50,
+        y: -100,
     };
+    const depthFactor = 250;
     const siblingSeparation = {
         nonSiblings: 3,
         siblings: 3
@@ -23,10 +24,17 @@ const Chart = () => {
     }) => (
         <g>
             <foreignObject {...foreignObjectProps}>
-                <div style={{ border: "1px solid black", backgroundColor: "#dedede" }}>
-                    <h3 style={{ textAlign: "center" }}>{nodeDatum.category}</h3>
-                    <h3 style={{ textAlign: "center" }}>{nodeDatum.name}</h3>
-                    <h3 style={{ textAlign: "center" }}>JOB GRADE: {nodeDatum.grade}</h3>
+                <div className="chart-node">
+                    <h3>{nodeDatum.category}</h3>
+                    <h3>{nodeDatum.name}</h3>
+                    <h3>
+                        JOB GRADE: {nodeDatum.grade}
+                        <button
+                            className="circle-button"
+                        >
+                            +
+                        </button>
+                    </h3>
                 </div>
             </foreignObject>
         </g>
@@ -41,7 +49,7 @@ const Chart = () => {
                 orientation="vertical"
                 pathFunc="step"
                 separation={siblingSeparation}
-                depthFactor={200}
+                depthFactor={depthFactor}
                 renderCustomNodeElement={(rd3tProps) =>
                     renderForeignObjectNode({ ...rd3tProps, foreignObjectProps })
                 }
