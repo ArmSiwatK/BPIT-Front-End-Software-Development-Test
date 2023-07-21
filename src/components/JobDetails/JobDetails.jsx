@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { NavLink } from "react-router-dom";
-import Promotion from './Promotion';
 import { CircularProgressbarWithChildren } from 'react-circular-progressbar';
+import Promotion from './Promotion';
 import 'react-circular-progressbar/dist/styles.css';
 import './JobDetails.scss';
 
@@ -16,14 +16,47 @@ const countMatches = (jobCriteria, employeeData) => {
 };
 
 const JobDetails = ({ promotionCriteria, fastTrackCriteria, employeeData }) => {
-    const matchCountPromotion = countMatches(promotionCriteria.jobCriteria, employeeData.employeeStats);
-    const matchCountFastTrack = countMatches(fastTrackCriteria.jobCriteria, employeeData.employeeStats);
+    const [isMobileView, setIsMobileView] = useState(false);
+
+    const matchCountPromotion = countMatches(
+        promotionCriteria.jobCriteria,
+        employeeData.employeeStats
+    );
+    const matchCountFastTrack = countMatches(
+        fastTrackCriteria.jobCriteria,
+        employeeData.employeeStats
+    );
+
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobileView(window.innerWidth <= 1024);
+        };
+
+        handleResize();
+        window.addEventListener('resize', handleResize);
+
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
 
     return (
         <div className="promotion-background">
             <div className="promotion-container-all">
-                <div className="promotion-header">
-                    {promotionCriteria.jobName} — [Job Grade: {promotionCriteria.jobGrade}] — [{promotionCriteria.jobCategory}]
+                <div className={`promotion-header ${isMobileView ? 'mobile-view' : ''}`}>
+                    {isMobileView ? (
+                        <div>
+                            <div>{promotionCriteria.jobName}</div>
+                            <div>
+                                [Job Grade: {promotionCriteria.jobGrade}] — [{promotionCriteria.jobCategory}]
+                            </div>
+                        </div>
+                    ) : (
+                        <div>
+                            {promotionCriteria.jobName} — [Job Grade: {promotionCriteria.jobGrade}] — [
+                            {promotionCriteria.jobCategory}]
+                        </div>
+                    )}
                 </div>
                 <div className="promotion-container">
                     <div className="promotion-list">
