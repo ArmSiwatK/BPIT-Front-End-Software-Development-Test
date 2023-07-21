@@ -83,6 +83,7 @@
     .node-category {
       border-radius: 10px 10px 0 0;
       background-color: #dddddd;
+      border: 1px solid white;
       padding: 10px;
     }
 
@@ -115,6 +116,7 @@
 
         .plus-symbol {
           transform: translate(0, -2px);
+          color: white;
         }
 
         &:hover {

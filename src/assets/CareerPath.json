@@ -2,21 +2,25 @@
   "category": "R&D",
   "name": "Lead Technical Engineer",
   "grade": "6",
+  "link": "lead-technical-engineer",
   "children": [
     {
       "category": "R&D",
       "name": "Senior Support Engineer",
-      "grade": "5"
+      "grade": "5",
+      "link": "senior-support-engineer"
     },
     {
       "category": "R&D",
       "name": "Senior Technical Engineer",
       "grade": "5",
+      "link": "senior-technical-engineer",
       "children": [
         {
           "category": "R&D",
           "name": "Technical Engineer",
-          "grade": "4"
+          "grade": "4",
+          "link": "technical-engineer"
         }
       ]
     }

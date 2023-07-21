@@ -1,5 +1,6 @@
 import React from 'react';
 import Tree from 'react-d3-tree';
+import { NavLink } from "react-router-dom";
 import { CenterTree } from "./CenterTree";
 import CareerPath from "../../assets/CareerPath.json";
 import "./Chart.scss";
@@ -19,28 +20,47 @@ const Chart = () => {
     }
 
     const renderForeignObjectNode = ({ nodeDatum, foreignObjectProps }) => {
-        const applyGradeColor = (grade) => {
+        const applyGradeStyle = (grade) => {
             switch (grade) {
                 case "1":
-                    return '#444';
+                    return {
+                        backgroundColor: '#444',
+                        color: 'white',
+                    };
                 case "2":
-                    return '#666';
+                    return {
+                        backgroundColor: '#666',
+                        color: 'white',
+                    };
                 case "3":
-                    return '#888';
+                    return {
+                        backgroundColor: '#888',
+                        color: 'white',
+                    };
                 case "4":
-                    return '#aaa';
+                    return {
+                        backgroundColor: '#aaa',
+                        color: 'black',
+                    };
                 case "5":
-                    return '#ccc';
+                    return {
+                        backgroundColor: '#ccc',
+                        color: 'black',
+                    };
                 case "6":
-                    return '#eee';
+                    return {
+                        backgroundColor: '#eee',
+                        color: 'black',
+                    };
                 default:
-                    return '#eee';
+                    return {
+                        backgroundColor: '#eee',
+                        color: 'black',
+                    };
             }
         };
 
-        const nodeCategoryStyle = {
-            backgroundColor: applyGradeColor(nodeDatum.grade),
-        };
+        const nodeCategoryStyle = applyGradeStyle(nodeDatum.grade);
 
         return (
             <g>
@@ -53,7 +73,7 @@ const Chart = () => {
                         <div className="node-grade-container">
                             <div className="node-grade">JOB GRADE: {nodeDatum.grade}</div>
                             <div className="circle-button">
-                                <span className="plus-symbol">+</span>
+                                <NavLink to="/promotion" className="plus-symbol">+</NavLink>
                             </div>
                         </div>
                     </div>
