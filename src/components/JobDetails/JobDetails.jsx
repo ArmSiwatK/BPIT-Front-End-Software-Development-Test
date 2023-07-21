@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from "react-router-dom";
 import Promotion from './Promotion';
 import { CircularProgressbarWithChildren } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
@@ -53,6 +54,9 @@ const JobDetails = ({ promotionCriteria, fastTrackCriteria, employeeData }) => {
                         </CircularProgressbarWithChildren>
                         <Promotion promotionCriteria={fastTrackCriteria} employeeData={employeeData} />
                     </div>
+                </div>
+                <div className="circle-button">
+                    <NavLink to="/" className="minus-symbol">-</NavLink>
                 </div>
             </div>
         </div>

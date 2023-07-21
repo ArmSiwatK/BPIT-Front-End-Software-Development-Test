@@ -2,7 +2,7 @@ import NavigationBar from "../components/NavigationBar/NavigationBar";
 import SideMenu from "../components/SideMenu/SideMenu";
 import Chart from "../components/Chart/Chart";
 import Footer from "../components/Footer/Footer";
-import "../styles/App.scss";
+import "../styles/Pages.scss";
 
 function Home() {
     return (

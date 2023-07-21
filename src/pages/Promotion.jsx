@@ -5,7 +5,7 @@ import Footer from "../components/Footer/Footer";
 import PromotionCriteria from "../assets/PromotionCriteria.json";
 import FastTrackCriteria from "../assets/FastTrackCriteria.json";
 import EmployeeData from "../assets/MockEmployee.json";
-import "../styles/App.scss";
+import "../styles/Pages.scss";
 
 function Promotion() {
     return (
@@ -15,7 +15,11 @@ function Promotion() {
                 <SideMenu />
                 <div className="career-path">
                     <div className="career-path-title">Career Path</div>
-                    <JobDetails promotionCriteria={PromotionCriteria} fastTrackCriteria={FastTrackCriteria} employeeData={EmployeeData} />
+                    <JobDetails
+                        promotionCriteria={PromotionCriteria}
+                        fastTrackCriteria={FastTrackCriteria}
+                        employeeData={EmployeeData}
+                    />
                 </div>
             </div>
             <Footer />
