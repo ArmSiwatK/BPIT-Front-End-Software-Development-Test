@@ -1,0 +1,29 @@
+[
+  { "name": "Career Path", "link": "/", "options": [] },
+  {
+    "name": "Competency",
+    "link": "/",
+    "options": [
+      { "name": "Competency Report", "link": "/" },
+      { "name": "Competency List", "link": "/" }
+    ]
+  },
+  {
+    "name": "IDP",
+    "link": "/",
+    "options": [
+      { "name": "IDP ของฉัน", "link": "/" },
+      { "name": "การประเมิน IDP", "link": "/" }
+    ]
+  },
+  {
+    "name": "การฝึกอบรม",
+    "link": "/",
+    "options": [
+      { "name": "E-Learning ของฉัน", "link": "/" },
+      { "name": "ซื้อ E-Learning", "link": "/" },
+      { "name": "ประวัติการฝึกอบรม", "link": "/" }
+    ]
+  },
+  { "name": "Organization Chart", "link": "/", "options": [] }
+]

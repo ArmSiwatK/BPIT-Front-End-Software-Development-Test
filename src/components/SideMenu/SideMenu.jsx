@@ -1,33 +1,24 @@
+import React from "react";
 import DropdownTab from "./DropdownTab";
 import "./SideMenu.scss";
+import sideMenuTabsData from "../../assets/SideMenuTabs.json";
 
 const SideMenu = () => {
-  const sideMenuTabs = [
-    { name: "Career Path", options: [] },
-    {
-      name: "Competency",
-      options: ["Competency Report", "Competency List"],
-    },
-    {
-      name: "IDP",
-      options: ["IDP ของฉัน", "การประเมิน IDP"],
-    },
-    {
-      name: "การฝึกอบรม",
-      options: ["E-Learning ของฉัน", "ซื้อ E-Learning", "ประวัติการฝึกอบรม"],
-    },
-    { name: "Organization Chart", options: [] },
-  ];
+  const sideMenuTabs = sideMenuTabsData;
+  const tabOptions = sideMenuTabs.map((tabData) => tabData.options.map((option) => option.name));
+  const tabSublinks = sideMenuTabs.flatMap((tabData) => tabData.options.map((option) => option.link));
 
   return (
     <div className="side-menu">
       <div className="top-section">Main Menu</div>
       <div className="tabs">
-        {sideMenuTabs.map((tabData) => (
+        {sideMenuTabs.map((tabData, index) => (
           <DropdownTab
             key={tabData.name}
             tabName={tabData.name}
-            options={tabData.options}
+            options={tabOptions[index]}
+            link={tabData.link}
+            sublink={tabSublinks[index]}
           />
         ))}
       </div>
