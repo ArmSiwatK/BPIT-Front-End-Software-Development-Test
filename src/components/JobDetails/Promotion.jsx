@@ -16,10 +16,10 @@ const Promotion = ({ promotionCriteria, employeeData }) => {
             <table className="promotion-table">
                 <thead>
                     <tr>
-                        <th>#</th>
-                        <th>Assessment</th>
-                        <th>Goal</th>
-                        <th>Present</th>
+                        <th>ลำดับ</th>
+                        <th>หัวข้อประเมิน</th>
+                        <th>เป้าหมาย</th>
+                        <th>ปัจจุบัน</th>
                     </tr>
                 </thead>
                 {isCollapsed ? (
