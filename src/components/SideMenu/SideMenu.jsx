@@ -1,7 +1,7 @@
 import React from "react";
 import DropdownTab from "./DropdownTab";
-import "./SideMenu.scss";
 import sideMenuTabsData from "../../assets/SideMenuTabs.json";
+import "./SideMenu.scss";
 
 const SideMenu = () => {
   const sideMenuTabs = sideMenuTabsData;
