@@ -13,11 +13,8 @@ $dark-text-color: #000000;
   font-family: $font-family;
   line-height: 1.5;
   font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: $background-color;
-
+  color: $dark-text-color;
+  background-color: $light-text-color;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -62,17 +59,4 @@ button:hover {
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: $dark-text-color;
-    background-color: $light-text-color;
-  }
-  a:hover {
-    color: $light-hover-color;
-  }
-  button {
-    background-color: $light-button-bg;
-  }
 }
