@@ -4,7 +4,7 @@
 
 ```
 git clone https://github.com/ArmSiwatK/BPIT-Front-End-Software-Development-Test.git
-cd your-project
+cd BPIT-Front-End-Software-Development-Test
 ```
 
 2. Install the project dependencies:
